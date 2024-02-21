@@ -4,7 +4,7 @@ from tensorflow import keras
 
 def neural_net(pred: int) -> int:
     layers = [
-        keras.layers.Dense(units=1, input_shape=[1])
+        tf.keras.layers.Dense(units=1, input_shape=[1])
     ] 
     # defining the layers of the model 
     # -> 1 index = 1 layer
