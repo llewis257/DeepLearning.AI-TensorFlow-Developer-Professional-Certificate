@@ -15,8 +15,9 @@ test_img = test_img/255
 # implement a callback - to stop the model when we have desired output
 class myCallback(tf.keras.callbacks.Callback):
   def on_epoch_end(self, epoch, logs={}):
-    if(logs.get('accuracy') >= 0.6): # Experiment with changing this value
-      print("\nReached 60% accuracy so cancelling training!")
+    accuracy = 95/100
+    if(logs.get('accuracy') >= accuracy): # Experiment with changing this value
+      print(f"\nReached {accuracy} accuracy so cancelling training!")
       self.model.stop_training = True
 
 callbacks = myCallback()
@@ -26,10 +27,10 @@ model = keras.Sequential([
     keras.layers.Dense(units=128, activation= tf.nn.relu), # hidden layer has 128 neurons
     keras.layers.Dense(units=10, activation= tf.nn.softmax) # units = the size of the output labels, there are 10 labels
 ])
-model.compile(optimizer= tf.optimizers.Adam(), loss = 'sparse_categorical_crossentropy')
+model.compile(optimizer= tf.optimizers.Adam(), loss = 'sparse_categorical_crossentropy', metrics=['accuracy'])
 print('training_img shape:', training_img.shape)
 print('training_labels shape:', training_labels.shape)
-model.fit(training_img, training_labels, epochs= 5, callbacks=callbacks)
+model.fit(training_img, training_labels, epochs= 5, callbacks=[callbacks])
 
 model.evaluate(test_img, test_labels)
 
