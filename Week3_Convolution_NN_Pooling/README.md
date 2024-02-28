@@ -13,10 +13,13 @@ Applied on an image, it gives the following result:
 #### Convolution
 Convolution of an image is simply taking a Matrix V with predefined values
 ( in our example:
-
+```
     [ 0 1 2 ]                 
 V = [ 2 2 0 ]    
     [ 0 1 2 ]   
+
+```
+
 )  
 and multiplying it with parts of the input image equal to the size of the Matrix v (also called a kernel), here 3 * 3.
 Here is an illustration:
