@@ -7,8 +7,8 @@ Pooling, as shown in the image below, is reducing the size of a matrix in favor 
 
 Applied on an image, it gives the following result:
 
-- MaxPooling on an image of a cat:
-<img src="img/maxPooledImage.jpeg" width="100%">
+- MaxPooling and AveragePooling on an image of a cat:
+<img src="img/maxAndAveragePoolingImage.png" width="100%">
 
 
 #### Learning Objectives
