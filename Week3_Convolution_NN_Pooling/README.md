@@ -11,7 +11,11 @@ Applied on an image, it gives the following result:
 <img src="img/maxAndAveragePoolingImage.png" width="100%">
 
 #### Convolution
-Convolution of an image is simply taking a Matrix v with predefined values (in our example:\Conv2D{v} = \begin{bmatrix} 0 1 2 \\\ 2 2 0 \\\ 0 1 2 \end{bmatrix}) and multiplying it with parts of the input image equal to the size of the Matrix v (also called a kernel), here 3 * 3.
+Convolution of an image is simply taking a Matrix v with predefined values
+( in our example:
+'''\Conv2D{v} = \begin{bmatrix} 0 1 2 \\\ 2 2 0 \\\ 0 1 2 \end{bmatrix} '''
+)
+and multiplying it with parts of the input image equal to the size of the Matrix v (also called a kernel), here 3 * 3.
 Here is an illustration:
 <img src="img/convolutionMatrix.gif" width="100%">
 
