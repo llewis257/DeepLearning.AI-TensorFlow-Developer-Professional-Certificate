@@ -6,7 +6,6 @@
 
 Here's an example of how the data looks (*each class takes three-rows*):
 
-![](doc/img/fashion-mnist-sprite.png)
 
 <img src="img/embedding.gif" width="100%">
 
