@@ -21,7 +21,7 @@ V = [ 2 2 0 ]
 ```
 
 )  
-and multiplying it with parts of the input image equal to the size of the Matrix v (also called a kernel), here 3 * 3.
+and multiplying it with parts of the input image's pixels. We take a 3 * 3 corner of the pixels matrix (also called a kernel), as the mask (convolution mask) is also of size 3 * 3.
 Here is an illustration:
 <img src="img/convolutionMatrix.gif" width="100%">
 
